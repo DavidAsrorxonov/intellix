@@ -1,0 +1,13 @@
+specVersion: "v1"
+serviceId: "intellix-7f1e7-service"
+location: "us-east4"
+schemas:
+  - source: "./schema"
+    datasource:
+      postgresql:
+        database: "intellix-7f1e7-database"
+        cloudSql:
+          instanceId: "intellix-7f1e7-instance"
+          # schemaValidation: "STRICT"     # STRICT mode makes Postgres schema match Data Connect exactly.
+          # schemaValidation: "COMPATIBLE" # COMPATIBLE mode makes Postgres schema compatible with Data Connect.
+connectorDirs: ["./example"]
