@@ -1,3 +1,5 @@
+import SkillCard from "#/components/skill-card";
+import { dummySkills } from "#/lib/dummy-data";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Terminal, Upload } from "lucide-react";
 
@@ -43,7 +45,17 @@ function App() {
           </p>
         </div>
 
-        <div>{/* {skills} */}</div>
+        <div>
+          {dummySkills.length > 0 ? (
+            <div className="skills-grid">
+              {dummySkills.map((skill) => (
+                <SkillCard key={skill.id} {...skill} />
+              ))}
+            </div>
+          ) : (
+            <p>No skills have been created yet.</p>
+          )}
+        </div>
       </section>
     </div>
   );
