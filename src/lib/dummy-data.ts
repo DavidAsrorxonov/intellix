@@ -1,0 +1,67 @@
+export const dummySkills: SkillRecord[] = [
+  {
+    id: "1",
+    title: "React Hooks",
+    slug: "react-hooks",
+    description:
+      "Master React Hooks to write functional components with state management and side effects.",
+    category: "Frontend",
+    tags: ["react", "hooks", "javascript", "frontend"],
+    installCommand: "npm install react",
+    createdAt: "2024-01-15T10:30:00Z",
+    authorClerkId: "clerk_user_123",
+    authorEmail: "jane.doe@example.com",
+  },
+  {
+    id: "2",
+    title: "TypeScript Advanced Types",
+    slug: "typescript-advanced-types",
+    description:
+      "Learn advanced TypeScript features including generics, conditional types, and mapped types.",
+    category: "Backend",
+    tags: ["typescript", "types", "advanced", "javascript"],
+    installCommand: "npm install typescript --save-dev",
+    createdAt: "2024-02-20T14:45:00Z",
+    authorClerkId: "clerk_user_456",
+    authorEmail: "john.smith@example.com",
+  },
+  {
+    id: "3",
+    title: "Database Design with PostgreSQL",
+    slug: "database-design-postgresql",
+    description:
+      "Understand database normalization, schema design, and optimization techniques for PostgreSQL.",
+    category: "Database",
+    tags: ["postgresql", "database", "sql", "design"],
+    installCommand: "brew install postgresql",
+    createdAt: "2024-03-10T09:15:00Z",
+    authorClerkId: "clerk_user_789",
+    authorEmail: "alice.johnson@example.com",
+  },
+  {
+    id: "4",
+    title: "REST API Design",
+    slug: "rest-api-design",
+    description:
+      "Best practices for designing scalable and maintainable REST APIs with proper versioning and documentation.",
+    category: "Backend",
+    tags: ["api", "rest", "design", "backend", "node"],
+    installCommand: "npm install express",
+    createdAt: "2024-01-08T11:20:00Z",
+    authorClerkId: "clerk_user_321",
+    authorEmail: "bob.wilson@example.com",
+  },
+  {
+    id: "5",
+    title: "CSS Grid Layout",
+    slug: "css-grid-layout",
+    description:
+      "Create responsive and flexible layouts using CSS Grid with advanced alignment and positioning techniques.",
+    category: "Frontend",
+    tags: ["css", "grid", "layout", "responsive", "frontend"],
+    installCommand: "npm install css-grid-layout",
+    createdAt: "2024-02-28T16:00:00Z",
+    authorClerkId: null,
+    authorEmail: null,
+  },
+];
