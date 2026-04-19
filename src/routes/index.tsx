@@ -43,9 +43,7 @@ function App() {
           </p>
         </div>
 
-        <div>
-          <p>Skill Card</p>
-        </div>
+        <div>{/* {skills} */}</div>
       </section>
     </div>
   );
