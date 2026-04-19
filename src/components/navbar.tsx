@@ -1,6 +1,6 @@
 import { LogIn } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import { Show, SignInButton, UserButton } from "@clerk/tanstack-react-start";
+import { Show, UserButton } from "@clerk/tanstack-react-start";
 
 const Navbar = () => (
   <nav className="navbar">
