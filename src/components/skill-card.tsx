@@ -9,18 +9,22 @@ import {
   BookmarkIcon,
 } from "lucide-react";
 import { usePostHog } from "posthog-js/react";
+import type { GetSkillsData } from "#/dataconnect-generated";
+
+type SkillCardProps = GetSkillsData["skills"][number];
 
 const SkillCard = ({
-  authorEmail,
-  category,
   createdAt,
   description,
   installCommand,
   tags,
   title,
-}: SkillRecord) => {
+  author,
+}: SkillCardProps) => {
   const [copied, setCopied] = useState(false);
   const posthog = usePostHog();
+
+  const category = tags[0] ?? "General";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCommand || "");
@@ -57,9 +61,13 @@ const SkillCard = ({
       <div className="body">
         <div className="meta">
           <div className="author">
-            <img src="/logo512.png" alt="Author avatar" className="avatar" />
+            <img
+              src={author.imageUrl || "/logo512.png"}
+              alt={`${author.username} avatar`}
+              className="avatar"
+            />
             <div className="author-copy">
-              <p>David</p>
+              <p>{author.username}</p>
               <p>{new Date(createdAt as string).toLocaleDateString()}</p>
             </div>
           </div>
@@ -101,7 +109,7 @@ const SkillCard = ({
 
             <div className="comments">
               <MessageSquare size={14} />
-              <span>{authorEmail ? 1 : 0}</span>
+              <span>{author.email ? 1 : 0}</span>
             </div>
           </div>
 

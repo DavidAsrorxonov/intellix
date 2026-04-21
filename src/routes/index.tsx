@@ -22,7 +22,7 @@ const getSkillsFn = createServerFn({ method: "GET" }).handler(async () => {
 
 export const Route = createFileRoute("/")({
   component: App,
-  loader: () => getSkillsFn,
+  loader: () => getSkillsFn(),
 });
 
 function App() {
